@@ -24,13 +24,13 @@ cd ~/.config/roberto_ai && git pull
 **Descrizione:** Standards per Docker (directory structure, user UID 1001:110, bind mounts only).
 
 ### servers
-**Quando usare:** Per SSH, connessioni a srv1/srv2/nas, gestione server, operazioni sistema.
-**Descrizione:** Workflow SSH, regole per srv1/srv2/nas (TrueNAS Scale), operazioni pericolose confirmation.
+**Quando usare:** Per SSH, connessioni a srv1/mnt1/nas, gestione server, operazioni sistema.
+**Descrizione:** Workflow SSH, regole per srv1/mnt1/nas (TrueNAS Scale), operazioni pericolose confirmation.
 
 ## Regole Generali
 
 1. Usa lo skill appropriato quando inizi un task
 2. Dopo ogni attività completata, fai `git add . && git commit -m "描述" && git push`
-3. Per SSH, usa `ssh srv1`, `ssh srv2`, `ssh nas`
+3. Per SSH, usa `ssh srv1`, `ssh mnt1`, `ssh nas`
 4. Su nas (TrueNAS): solo operazioni read-only
-5. Su srv1/srv2: operazioni full con confirmation per operazioni pericolose
+5. Su srv1/mnt1: operazioni full con confirmation per operazioni pericolose

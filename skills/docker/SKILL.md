@@ -20,6 +20,11 @@ description: |
 - Tutti i container run as `docker` user (UID 1001, GID 110)
 - Use `user: "1001:110"` in docker-compose.yaml
 - Mai run come root unless esplicito
+- **Verifica UID/GID:** Su ogni server, conferma che l'utente `docker` esista con:
+  ```bash
+  id docker
+  ```
+  Se non esiste, crearlo (vedi skill servers per istruzioni mnt1)
 
 ## Compose File Requirements
 
@@ -50,4 +55,5 @@ services:
 1. Create directory: `mkdir -p /docker/<project>/data/<service>`
 2. Create docker-compose.yaml
 3. Pre-create data directories
-4. Test con `docker-compose up`
+4. Set permissions: `sudo chown -R 1001:110 /docker/<project>/data`
+5. Test con `docker-compose up`

@@ -26,4 +26,4 @@ description: |
 1. Verifica che il codice funziona locally
 2. Commit con messaggio descrittivo
 3. Push al remote
-4. Se su srv1: git pull sul server target
+4. Sul server target (srv1/mnt1): `cd ~/.config/roberto_ai && git pull`
